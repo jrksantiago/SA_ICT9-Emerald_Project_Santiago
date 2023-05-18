@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Measurement converter</title>
+</head>
+<style type="text/css">
+		#text{
+			text-align: center;
+			font-family: 'Montez', cursive;
+}
+
+
+		#text2{
+			font-family: 'Racing Sans One', cursive;
+			text-align: center;
+			
+		}
+
+		#table{
+			border-style: solid;
+			border-width: 18px;
+			border-bottom-color: darkred;
+			border-right-color: blue;
+			border-left-color: green;
+			border-top-color: yellow;
+			background-color: grey;
+			width: 40%;
+			margin: auto;
+
+		}
+		#text3{
+			text-align: center;	
+			font-family: 'Racing Sans One', cursive;
+		}
+
+		#text4{
+			font-family: 'Lobster', cursive;
+		}
+</style>
+<body id="table" background="#FF950D" style="background-color: dimgrey;">
+	
+			<big><h1 id="text">Measurement Converter</h1></big>
+
+			<center><h1 id="text2">Formulas:</h1><br></center>
+			<center><h2 id="text4">1 millimeter = 0.001 meters</h2></center>
+			<center><h2 id="text4">1 millimeter = 0.1 centimeters</h2></center>
+			<center><h2 id="text4">1 millimeter = 0.000001 kilometers</h2></center>
+<big><h2 id="text3">Type Value:</h2></big> 
+
+
+<form>
+	
+			
+			
+			<center><big><label id="text2">Enter Millimeters:</label></big> </center>										
+			<center><input type="number" name=meas id=meas id="text2" placeholder="Millimeters:"></center>																			 					 	
+			<center><big><h1 id="text3">=</h1></big></center>
+
+
+	<center><big><button type="button" onclick="Compute()" id="text2" style="background-color: orangered;"  style="height: 45px;" style="width: 70%;">Convert</button></big></center>
+	<script type="text/javascript">
+
+				
+
+	function Compute(){
+	//variable declaration;assignment of values
+		var meas = document.getElementById("meas").value;
+		document.getElementById("cm2").innerHTML = Number (meas) * Number (0.001);	
+		document.getElementById("m2").innerHTML = Number (meas) * Number (0.1);	
+		document.getElementById("km2").innerHTML = Number (meas) * Number (0.000001);
+		}
+</script>
+			<ol type="1">
+			<center><big><label id="text3">The value is=</label><br>
+
+			 <strong id="m2">cm</strong><br>
+			 <strong id="km2">km</strong><br> 
+			 <strong id="cm2">m</strong></big></center> 
+			</ol>
+</form>
+</body>
+</html>
